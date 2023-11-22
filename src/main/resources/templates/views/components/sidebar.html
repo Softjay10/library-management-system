@@ -1,0 +1,89 @@
+<component th:fragment="sidebar" xmlns:th="http://www.thymeleaf.org">
+    <!-- start aside container -->
+    <aside class="main-sidebar sidebar-dark-lightblue elevation-4">
+        <!-- Brand Logo -->
+        <a href="/" class="brand-link">
+            <span class="brand-text font-weight-light">
+                <h6 align="center"><small>Library Management System</small></h6>
+            </span>
+        </a>
+
+        <!-- start sidebar -->
+        <div class="sidebar">
+
+            <!-- start user panel (optional) -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img src="vendors/assets/img/avatar.jpg" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block">Welcome!</a>
+                </div>
+            </div>
+            <!-- end user panel (optional) -->
+
+            <!-- start navbar -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                    data-accordion="false">
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="/" class="nav-link active">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/books" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>Books</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-list"></i>
+                            <p>Category
+                                <i class="fas fa-angle-left right"></i>
+                                <span class="badge badge-info right"></span>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/authors" class="nav-link ">
+                                    <i class="fa fa-user nav-icon"></i>
+                                    <p>Authors</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/categories" class="nav-link ">
+                                    <i class="fa fa-file nav-icon"></i>
+                                    <p>Category</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/publishers" class="nav-link ">
+                                    <i class="fa fa-users nav-icon"></i>
+                                    <p>Publisher</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="nav-icon fa fa-power-off"></i>
+                            <p>
+                                Logout
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- end navbar -->
+        </div>
+        <!-- end sidebar -->
+    </aside>
+    <!-- end aside container -->
+</component>

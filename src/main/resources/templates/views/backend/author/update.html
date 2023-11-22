@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+<head>
+    <include th:replace="views/components/metas :: metas"></include>
+    <include th:replace="views/components/styles :: styles"></include>
+
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+
+    <div class="card">
+
+        <div class="card card-lightblue">
+            <div class="card-header">
+                <h3 class="card-title">Update Author</h3>
+            </div>
+            <form th:action="@{/edit/{id}(id=${author.id})}" th:object="${author}" enctype="multipart/form-data" method="post">
+                <div class="card-body">
+
+                    <div class="col-md-12">
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="col-form-label">Author Name:</label>
+                                    <input type="text" th:field="*{name}" id="name" class="form-control" placeholder="Author Name" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="col-form-label">Description</label>
+                                    <textarea th:field="*{description}" class="form-control" id="description" name="description" placeholder="Description" required></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn bg-lightblue btn-rounded">
+                        <i class="fa fa-save"></i> Submit
+                    </button>
+                    <a th:href="@{/authors}" class="btn btn-outline-danger btn-rounded">
+                        <i class="fa fa-times"></i> Cancel
+                    </a>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+<include th:replace="views/components/scripts :: scripts"></include>
+</body>
+</html>
